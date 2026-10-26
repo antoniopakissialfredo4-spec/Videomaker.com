@@ -1,0 +1,6 @@
+{
+  "name": "VIDEOMAKER — Fernando Kibuba",
+  "description": "Plataforma oficial de fotografias, vídeos e atividades da Igreja Metodista de Fernando Kibuba.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

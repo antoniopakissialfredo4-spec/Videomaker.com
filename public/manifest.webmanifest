@@ -1,0 +1,35 @@
+{
+  "id": "/",
+  "name": "Videomaker — Fernando Kibuba",
+  "short_name": "Videomaker",
+  "description": "Plataforma oficial de fotografias, vídeos, Stories e atividades da Igreja Metodista de Fernando Kibuba.",
+  "lang": "pt-AO",
+  "dir": "ltr",
+  "theme_color": "#08080a",
+  "background_color": "#08080a",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "start_url": "/",
+  "categories": ["photo", "video", "social", "lifestyle"],
+  "icons": [
+    {
+      "src": "/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-maskable-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

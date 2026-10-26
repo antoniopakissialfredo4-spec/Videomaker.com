@@ -1,0 +1,221 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Inter', system-ui, -apple-system, sans-serif;
+    --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    background-color: #08080a;
+    color: #f3f4f6;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom gold gradient and glow utilities */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #f5d77f 0%, #d4af37 50%, #aa820a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-border {
+  border-image: linear-gradient(135deg, #f5d77f, #d4af37, #996515) 1;
+}
+
+.gold-glow {
+  box-shadow: 0 0 25px -5px rgba(212, 175, 55, 0.25);
+}
+
+.gold-glow-sm {
+  box-shadow: 0 0 12px -2px rgba(212, 175, 55, 0.3);
+}
+
+/* Story pulse ring */
+@keyframes storyRing {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-story-spin {
+  animation: storyRing 8s linear infinite;
+}
+
+/* Liquid Glass Keyframes & Ambient Motion */
+@keyframes liquidFloat {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -25px) scale(1.08);
+  }
+  66% {
+    transform: translate(-25px, 20px) scale(0.95);
+  }
+}
+
+@keyframes liquidFloatReverse {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(-30px, 25px) scale(1.05);
+  }
+  66% {
+    transform: translate(25px, -15px) scale(0.92);
+  }
+}
+
+.animate-liquid-float {
+  animation: liquidFloat 18s ease-in-out infinite;
+}
+
+.animate-liquid-float-slow {
+  animation: liquidFloatReverse 24s ease-in-out infinite;
+}
+
+/* Liquid Glass Cards & Surfaces */
+.liquid-glass {
+  background: rgba(18, 18, 22, 0.45);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5), inset 0 1px 0 0 rgba(255, 255, 255, 0.12);
+}
+
+.liquid-glass-light {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(20px) saturate(160%);
+  -webkit-backdrop-filter: blur(20px) saturate(160%);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08), inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
+}
+
+.liquid-glass-card {
+  background: linear-gradient(135deg, rgba(25, 25, 30, 0.6) 0%, rgba(12, 12, 16, 0.45) 100%);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4), inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.liquid-glass-card:hover {
+  background: linear-gradient(135deg, rgba(35, 35, 42, 0.7) 0%, rgba(18, 18, 24, 0.55) 100%);
+  border-color: rgba(212, 175, 55, 0.35);
+  box-shadow: 0 16px 45px -8px rgba(0, 0, 0, 0.6), 0 0 25px rgba(212, 175, 55, 0.15), inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
+}
+
+.liquid-glass-card-light {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(245, 245, 248, 0.7) 100%);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.04), inset 0 1px 0 0 rgba(255, 255, 255, 0.9);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.liquid-glass-card-light:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(250, 250, 252, 0.85) 100%);
+  border-color: rgba(212, 175, 55, 0.5);
+  box-shadow: 0 16px 36px -6px rgba(0, 0, 0, 0.08), 0 0 20px rgba(212, 175, 55, 0.12), inset 0 1px 0 0 rgba(255, 255, 255, 1);
+  transform: translateY(-4px);
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af37;
+}
+
+/* Smooth fade and scale animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Hide scrollbars cleanly for horizontal Story swiping on mobile & desktop */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Lightweight GPU-accelerated Story Floating Hearts & Emoji Reactions */
+@keyframes storyHeartFloat {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 12px, 0) scale(0.45) rotate(0deg);
+  }
+  15% {
+    opacity: 1;
+    transform: translate3d(var(--drift-mid-x, -12px), -55px, 0) scale(1.12) rotate(-8deg);
+  }
+  55% {
+    opacity: 0.95;
+    transform: translate3d(var(--drift-x, 18px), -210px, 0) scale(1.05) rotate(8deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(var(--drift-end-x, -8px), -390px, 0) scale(0.75) rotate(-5deg);
+  }
+}
+
+@keyframes storyEmojiPop {
+  0% {
+    transform: scale(1);
+  }
+  38% {
+    transform: scale(1.42) translateY(-4px);
+  }
+  70% {
+    transform: scale(0.94);
+  }
+  100% {
+    transform: scale(1.12);
+  }
+}
+
+.animate-story-float-particle {
+  will-change: transform, opacity;
+  pointer-events: none;
+  animation: storyHeartFloat var(--float-duration, 1350ms) cubic-bezier(0.22, 0.9, 0.32, 1) var(--float-delay, 0ms) forwards;
+}
+
+.animate-story-emoji-pop {
+  will-change: transform;
+  animation: storyEmojiPop 380ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-story-float-particle {
+    animation-duration: 450ms;
+  }
+  .animate-story-emoji-pop {
+    animation: none;
+  }
+}
